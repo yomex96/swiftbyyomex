@@ -1,0 +1,14 @@
+.AboutComponent{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+@media (max-width: 850px) {
+    .AboutComponent{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

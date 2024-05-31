@@ -1,0 +1,10 @@
+.about{
+    margin: 30px auto;
+    padding: 50px;
+    box-shadow: 5px 5px 10px black;
+}
+
+
+.about img:hover{
+    transform: scale(1.05);
+}

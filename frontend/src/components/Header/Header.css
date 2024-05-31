@@ -1,0 +1,138 @@
+.outterHeader{
+    height: 75vh;
+    width: 70vw;
+    margin: 100px auto 40px;
+    border-radius: 55px;
+    
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    position: relative;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+
+.header{
+    height: 74vh;
+    width: 69vw;
+    margin: 30px auto;
+    border-radius: 55px;
+    border-style: double;
+    background: url('/header_img6.png') no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+.headerContent{
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    gap: 1.5vw;
+    max-width: 82%;
+    bottom: 30%;
+    left: 6vw;
+    animation: fadeIn 3s;
+    background-color: rgba(255, 255, 255, 0.404);
+    border-radius: 29px;
+    animation: fadeIn 5s;
+    /* font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: larger;
+    font-weight: 500; */
+}
+
+.headerContent h2{
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    text-shadow: 1px 2px 2px white;
+    font-size: max(4.5vw, 22px);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.headerContent p{
+    color: black;
+    text-align: center;
+    text-shadow: 1px 2px 2px white;
+    font-size: 1.3vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.headerContent button{
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+
+/* Button Animation */
+.headerContent button {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    font-size: 16px;
+    color: green;
+    border: 1px solid green;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: color 0.6s;
+}
+
+.headerContent button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: green; /* sign in animation */
+    transition: height 0.6s;
+    z-index: -1;
+}
+
+.headerContent button:hover::before {
+    height: 100%;
+}
+
+.headerContent button:hover {
+    color: rgb(7, 117, 16);
+}
+
+
+:root .buttonwl {
+    color: black;
+}
+
+/* .lightcolors .buttonwl {
+    color: #747474;
+} */
+
+
+
+
+@media (max-width:1050px) {
+    .header-contents{
+        max-width: 45%;
+    }
+}
+
+@media (max-width:750px) {
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}

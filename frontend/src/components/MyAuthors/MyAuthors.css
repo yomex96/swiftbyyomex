@@ -1,0 +1,31 @@
+.text{
+    text-align: center;
+}
+
+.text h3{
+    color: rgb(3, 58, 11);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text p{
+    color: rgb(4, 109, 20);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text small{
+    color: rgb(10, 138, 116);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text h6{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.benjamin .ben{
+    border: 1px solid green;
+    border-radius: 100px;
+    box-shadow: 5px 5px 10px black;
+}

@@ -1,0 +1,156 @@
+.login-popup{
+    position: fixed;
+    /* width: 30%;
+    height: 60%; */
+    display: grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.904);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* :root .login-popup-title{
+    color: white;
+}
+
+.lightcolors .login-popup-title{
+    color: black;
+}
+
+
+:root .login-popup-container {
+    background-color: var(--body-color);
+}
+
+.lightcolors .login-popup-container {
+    background-color: white; 
+}
+
+.continuee{
+    position: relative;
+    top: 4px;
+} */
+
+
+.login-popup-container{
+    position: relative;
+    place-self: center;
+    width: max(23vw,330px);
+    color: rgb(0, 0, 0);
+    background-color: rgba(160, 245, 178, 0.445);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    border: double;
+    border-color: rgb(2, 105, 16);
+    font-size: 14px;
+    animation: fadeIn 1.5s;
+}
+.login-popup-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;   
+}
+.login-popup-title img{
+    width: 16px;
+    cursor: pointer;
+}
+.login-popup-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login-popup-inputs input{
+    outline: none;
+    border: 1px solid rgb(12, 184, 55);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.login-popup-container button{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+.login-popup-condition{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+.loginPopUpCondition p{
+    display: flex;
+    align-items: start;
+    padding: 19px;
+    gap: 8px;
+    margin-top: -36px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* .login-popup-condition input{
+    margin-top: 5px;
+} */
+.login-popup p span{
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+    color: rgb(4, 158, 42);
+    text-decoration: underline;
+}
+
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.success {
+    
+    background-color: green;
+}
+
+.notification.error {
+    background-color: red;
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-container input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Adjust this padding to make room for the icon */
+    box-sizing: border-box;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px; /* Adjust this position to place the icon correctly */
+    cursor: pointer;
+    font-size: 1.2em; /* Adjust icon size if necessary */
+    color: #555; /* Adjust color if necessary */
+}
+
+.password-toggle-icon i {
+    pointer-events: none;
+}

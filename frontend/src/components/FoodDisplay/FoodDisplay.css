@@ -1,0 +1,22 @@
+.food-display{
+    .foodDisplay{
+        /* background-color: rgba(221, 255, 244, 0.603); */
+        /* padding: 5px; */
+        /* border-radius: 30px; */
+        margin-top: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .foodDisplay h2{
+        font-size: max(2vw,24px);
+        font-weight: 600;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .foodDisplayList{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+        margin-top: 30px;
+        gap: 30px;
+        row-gap: 50px;
+    }
