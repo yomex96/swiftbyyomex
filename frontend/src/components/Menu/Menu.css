@@ -1,0 +1,72 @@
+.menu {
+  background-color: rgba(9, 255, 0, 0.075);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 20px;
+  margin-top: 65px;
+  width: 100%;
+  animation: fadeIn 5s;
+}
+
+.menu h1 {
+  color: black;
+  font-weight: 500;
+}
+
+.menuText {
+  max-width: 60%;
+  columns: green;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.menuList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin: 20px 0px;
+  overflow-x: scroll;
+}
+
+.menuListItem img {
+  width: 7.5vw;
+  min-width: 80px;
+  cursor: pointer;
+  border: 1px solid rgba(194, 216, 214, 0.534);
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.menuListItem p {
+  margin-top: 10px;
+  color: grey;
+  font-size: max(1.4vw, 16px);
+  cursor: pointer;
+}
+
+.menu hr {
+  margin: 10px 0;
+  height: 2px;
+  background-color: rgb(111, 219, 165);
+  border: none;
+}
+
+.menuList::-webkit-scrollbar {
+  display: none;
+}
+
+.menuListItem .active {
+  border: 2px solid rgba(0, 128, 0, 0.644);
+  padding: 2px;
+}
+
+
+@media (max-width:1050px) {
+  .menuText{
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
