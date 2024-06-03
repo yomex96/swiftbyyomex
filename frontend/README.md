@@ -23,6 +23,7 @@ To successfully run this code on your browser or to start the frontend developme
         
         npm create vite@latest .
 
+
         npm install
 
  5. Install the following additional packages
@@ -30,6 +31,10 @@ To successfully run this code on your browser or to start the frontend developme
        i. Fontawesome:
        
         npm install --save @fortawesome/fontawesome-free
+
+       ii. npm install axios
+
+       iii. npm install react react-router-dom
 
 
  6. Start the development Server:
