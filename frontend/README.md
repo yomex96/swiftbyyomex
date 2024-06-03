@@ -21,10 +21,10 @@ To successfully run this code on your browser or to start the frontend developme
 
  4. install Node Package Manager (npm):
         
-        npm create vite@latest .
+        i. npm install
+        
+       ii. npm create vite@latest .
 
-
-        npm install
 
  5. Install the following additional packages
        
