@@ -13,11 +13,15 @@ To successfully run this code on your browser or to start the frontend developme
 
  2. Install node on your device
 
+       
+
  3. make sure you are in the `frontend` folder/directory:
 
         cd frontend
 
  4. install Node Package Manager (npm):
+        
+        npm create vite@latest .
 
         npm install
 
