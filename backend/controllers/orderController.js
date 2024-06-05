@@ -8,7 +8,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 // placing user order from frontend
 const placeOrder = async (req,res) => {
 
-    const frontend_url = "http://localhost:5000";
+    const frontend_url = "http://localhost:5176";
+    // const frontendUrl = req.get('Origin') || 'http://localhost:5176';
 
     try {
         const newOrder = new orderModel({
@@ -42,12 +43,21 @@ const placeOrder = async (req,res) => {
             quantity:1
         })
 
+        // const session = await stripe.checkout.sessions.create({
+        //     line_items:line_items,
+        //     mode:'payment',
+        //     success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
+        //     cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
+        // })
+
         const session = await stripe.checkout.sessions.create({
-            line_items:line_items,
-            mode:'payment',
-            success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
-            cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
-        })
+            payment_method_types: ['card'], // Specify the payment method types here
+            line_items: line_items,
+            mode: 'payment',
+            success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
+            cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
+        });
+        
 
         res.json({success:true,session_url:session.url})
 
