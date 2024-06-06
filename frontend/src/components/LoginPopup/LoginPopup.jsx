@@ -4,6 +4,7 @@ import { assets } from '../../assets/assets'
 import { StoreContext } from '../../context/StoreContext'
 import axios from "axios"
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -18,6 +19,8 @@ const LoginPopup = ({ setShowLogin }) => {
   });
   const [showPassword, setShowPassword] = useState(false); // State to track password visibility
   const [notification, setNotification] = useState({ message: '', type: '' });
+
+  const navigate = useNavigate();
 
 
   const onChangeHandler = (event) => {
@@ -67,6 +70,8 @@ const LoginPopup = ({ setShowLogin }) => {
     setShowPassword(!showPassword);
   };
 
+
+
   return (
     <div className='login-popup'>
       {notification.message && (
@@ -111,7 +116,11 @@ const LoginPopup = ({ setShowLogin }) => {
             <i className={showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'}></i>
           </span>
           </div>
+          <span id='sp' style={{ color: '#157ae1', cursor: 'pointer' }} onClick={()=>navigate('/forgetpassword')}>
+              Forgot Password ?{' '}
+            </span>
         </div>
+        
         <button type='submit'>{currState === 'Sign Up' ? 'Create account' : 'Login'}</button>
         <div className="login-popup-condition">
           <input type="checkbox" required />

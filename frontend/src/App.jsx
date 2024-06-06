@@ -11,6 +11,7 @@ import LoginPopup from './components/LoginPopup/LoginPopup'
 import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/MyOrders'
 import About from './pages/About/About'
+import Forgetpassword from './components/Forgetpassword'
 
 // import React, { useState } from 'react'
 // import Navbar from './components/Navbar/Navbar'
@@ -41,6 +42,9 @@ const App = () => {
           {/* <Route path='/verify' element={<Verify />} /> */}
           <Route path='/myorders' element={<MyOrders />} />
           < Route path='/About' element={<About/>} />
+          <Route path='/forgetpassword' element={<Forgetpassword/>}/>
+          {/* <Route path='/reset-password/:randomString/:expirationTimestamp' element={<Resetpassword/>}/> */}
+
         </Routes>
       </div>
       <Footer />
