@@ -37,6 +37,12 @@ app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
+// Handle requests for /favicon.ico
+app.get('/favicon.ico', (req, res) => {
+    // Return a 200 OK response with an empty body for requests to /favicon.ico
+    res.status(200).send();
+  });
+
 app.get("/", (req, res) => {
     res.send("API Working");
 });
